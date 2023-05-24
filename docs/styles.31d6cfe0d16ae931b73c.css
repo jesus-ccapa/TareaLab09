@@ -1,0 +1,23 @@
+/* tiny reset */
+html, body {
+	margin: 4;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+/* body */
+body{
+  background: #d5a0d6;
+  font-family: sans-serif;
+  border-top: 5px solid #ac569d;
+}
+/* title */
+h1{
+  color: #5c084a ;
+  text-align: left;
+  font-size: 30px;
+  font-weight: 700;
+}
+label{
+    text-align: center;
+}

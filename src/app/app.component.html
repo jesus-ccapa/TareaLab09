@@ -1,0 +1,23 @@
+
+<div class="container">
+    <h1>Lista de tareas con Angular</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="tarea">Nombre de la tarea:</label>
+        <input placeholder="Ingresa la tarea" type="text" [(ngModel)]="nombreTarea" id="tarea">
+      </div>
+      <div class="form-group">
+        <button [disabled]="!nombreTarea" (click)="guardarTarea()">Guardar</button>
+      </div>
+    </form>
+
+  <table *ngFor="let tarea of tareas;let indice = index;" [class.tachado] ="tarea.terminada" >
+    <tr>
+      <th><input [(ngModel)]="tarea.terminada" (change)="cambiarEstadoDeTarea()" type="checkbox"></th>
+      <th> {{tarea.nombre}} </th>
+      <th><a  (click)="eliminarTarea(indice)" class="enlace-eliminar">&times;</a></th>
+    </tr>
+
+  </table>
+</div>
